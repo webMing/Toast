@@ -35,7 +35,7 @@ xcuserdata/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
-!Pods/Manifest.lock
+# 注意这中写法根本不会起作用 !Pods/Manifest.lock
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
