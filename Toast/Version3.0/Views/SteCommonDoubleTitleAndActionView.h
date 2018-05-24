@@ -13,4 +13,6 @@
 @property (strong, nonatomic) UIButton *actionBtn; //不要使用TargetAction
 @property (strong, nonatomic) UILabel *largeTitleLb; //大标题
 @property (strong, nonatomic) UILabel *titleLb; //小标题
+
+//改变内容
 @end
