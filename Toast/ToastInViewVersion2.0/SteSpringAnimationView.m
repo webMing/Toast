@@ -90,11 +90,8 @@ static const CGFloat ActionHeight = 50;
         make.height.greaterThanOrEqualTo(@(TilteLableLessHeight));
         //make.height.mas_greaterThanOrEqualTo(TilteLableLessHeight);
         //make.leading.equalTo(@10);
-        //make.leading.equalTo(self).offset(10.0f);
-        //make.trailing.equalTo(@-10);
-        //make.trailing.equalTo(self).offset(-10.0f);
-        make.leading.offset(10).and.trailing.offset(-10);
-
+        make.leading.offset(10.0f);
+        make.trailing.equalTo(@-10);
     }];
     
     [self.hSeperaterView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -190,7 +187,7 @@ static const CGFloat ActionHeight = 50;
     if (!_titleLb) {
         
         _titleLb = [[UILabel alloc]initWithFrame:CGRectZero];
-        _titleLb.backgroundColor = [UIColor redColor];
+        //_titleLb.backgroundColor = [UIColor redColor];
         _titleLb.textAlignment = NSTextAlignmentCenter;
         _titleLb.textColor = [UIColor blackColor];
         _titleLb.text = @"SegmentFault区";

@@ -22,5 +22,12 @@
     return [UIColor colorWithHex:hexValue alpha:1.0];
 }
 
++ (UIColor *)colorWithHexString:(NSString *)hexString
+{
+
+// NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
+    return [self colorWithHex:hexString.integerValue alpha:1.0f];
+}
+
 
 @end

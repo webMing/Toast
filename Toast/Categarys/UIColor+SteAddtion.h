@@ -11,4 +11,8 @@
 @interface UIColor (SteAddtion)
 + (UIColor*)colorWithHex:(NSInteger)hValue;
 + (UIColor*)colorWithHex:(NSInteger)hValue alpha:(CGFloat)aValue;
+
+// 用户测试项目新添加的
++ (UIColor *)colorWithHexString:(NSString *)hexString;
+
 @end

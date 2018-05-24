@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SteAnimationViewDelegate.h"
+#import "SteAnimationViewProtocols.h"
 
 @interface SteAnimationSuperView : UIView <SteAnimationViewObjDelegate>
 @property (strong, nonatomic) id<SteAnimationViewDelegate>aniObj;

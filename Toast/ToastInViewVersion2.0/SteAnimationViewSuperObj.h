@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SteAnimationViewDelegate.h"
+#import "SteAnimationViewProtocols.h"
 
 @interface SteAnimationViewSuperObj : NSObject <SteAnimationViewDelegate>
 @property (weak, nonatomic) id<SteAnimationViewObjDelegate>delegate;

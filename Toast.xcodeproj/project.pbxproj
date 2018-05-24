@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52251483322AECDF6320AE2E /* libPods-Toast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DB0F7D7FA8D0998BF9C875 /* libPods-Toast.a */; };
+		6D18231CB181FFD4E5DD0231 /* libPods-ToastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EDB7ADB32E643E6BF63B59 /* libPods-ToastTests.a */; };
+		77F9DC9FEB680BB4CD0FFEB5 /* libPods-ToastUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4631EFA8801BBEA91A69A91C /* libPods-ToastUITests.a */; };
+		90C2E60520B5BB6800A105F1 /* SteAnimationViewSuperObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5F620B5BB6700A105F1 /* SteAnimationViewSuperObj.m */; };
+		90C2E60620B5BB6800A105F1 /* SteAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5F920B5BB6700A105F1 /* SteAnimationViewObj.m */; };
+		90C2E60720B5BB6800A105F1 /* SteSpringAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FA20B5BB6700A105F1 /* SteSpringAnimationViewObj.m */; };
+		90C2E60820B5BB6800A105F1 /* SteAnimationMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FB20B5BB6700A105F1 /* SteAnimationMaskView.m */; };
+		90C2E60920B5BB6800A105F1 /* SteAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FD20B5BB6700A105F1 /* SteAnimationView.m */; };
+		90C2E60A20B5BB6800A105F1 /* SteSpringAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FE20B5BB6700A105F1 /* SteSpringAnimationView.m */; };
+		90C2E60B20B5BB6800A105F1 /* SteAnimationSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E60320B5BB6700A105F1 /* SteAnimationSuperView.m */; };
+		90C2E61B20B5BC4000A105F1 /* SteSpringFromCentreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E60E20B5BC4000A105F1 /* SteSpringFromCentreViewController.m */; };
+		90C2E61C20B5BC4000A105F1 /* SteCommonActionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61120B5BC4000A105F1 /* SteCommonActionPopView.m */; };
+		90C2E61D20B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61220B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m */; };
+		90C2E61E20B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61320B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m */; };
+		90C2E61F20B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61420B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.m */; };
+		90C2E62020B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61920B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.m */; };
 		90DD7EC520B44A6E00F9BD5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EC420B44A6E00F9BD5F /* AppDelegate.m */; };
 		90DD7EC820B44A6E00F9BD5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EC720B44A6E00F9BD5F /* ViewController.m */; };
 		90DD7ECB20B44A6E00F9BD5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DD7EC920B44A6E00F9BD5F /* Main.storyboard */; };
@@ -15,6 +31,14 @@
 		90DD7ED320B44A7000F9BD5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7ED220B44A7000F9BD5F /* main.m */; };
 		90DD7EDD20B44A7000F9BD5F /* ToastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EDC20B44A7000F9BD5F /* ToastTests.m */; };
 		90DD7EE820B44A7000F9BD5F /* ToastUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EE720B44A7000F9BD5F /* ToastUITests.m */; };
+		90DD7EFC20B44E1600F9BD5F /* UIColor+SteAddtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EF920B44E1600F9BD5F /* UIColor+SteAddtion.m */; };
+		90DD7EFD20B44E1600F9BD5F /* SteColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EFA20B44E1600F9BD5F /* SteColors.m */; };
+		90DD7EFE20B44E1600F9BD5F /* SteFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EFB20B44E1600F9BD5F /* SteFont.m */; };
+		90DD7F0B20B44E1F00F9BD5F /* AnimationSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0020B44E1E00F9BD5F /* AnimationSuperView.m */; };
+		90DD7F0C20B44E1F00F9BD5F /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0720B44E1E00F9BD5F /* AnimationView.m */; };
+		90DD7F0D20B44E1F00F9BD5F /* AnimationViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0820B44E1E00F9BD5F /* AnimationViewCtrl.m */; };
+		90DD7F0E20B44E1F00F9BD5F /* PopAnimationObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0920B44E1E00F9BD5F /* PopAnimationObj.m */; };
+		90DD7F0F20B44E1F00F9BD5F /* PopAnimationSuperObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0A20B44E1E00F9BD5F /* PopAnimationSuperObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +59,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E29CF65853C20A2DA10E835 /* Pods-ToastUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToastUITests/Pods-ToastUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4631EFA8801BBEA91A69A91C /* libPods-ToastUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToastUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		614344B187823FBA05408992 /* Pods-Toast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toast/Pods-Toast.debug.xcconfig"; sourceTree = "<group>"; };
+		79EDB7ADB32E643E6BF63B59 /* libPods-ToastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		847AABD766BD8D35ADE2EB47 /* Pods-Toast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toast/Pods-Toast.release.xcconfig"; sourceTree = "<group>"; };
+		85C8C9DA69C7D988D728BB9E /* Pods-ToastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToastTests/Pods-ToastTests.release.xcconfig"; sourceTree = "<group>"; };
+		90C2E5F620B5BB6700A105F1 /* SteAnimationViewSuperObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationViewSuperObj.m; sourceTree = "<group>"; };
+		90C2E5F720B5BB6700A105F1 /* SteSpringAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteSpringAnimationView.h; sourceTree = "<group>"; };
+		90C2E5F820B5BB6700A105F1 /* SteAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationView.h; sourceTree = "<group>"; };
+		90C2E5F920B5BB6700A105F1 /* SteAnimationViewObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationViewObj.m; sourceTree = "<group>"; };
+		90C2E5FA20B5BB6700A105F1 /* SteSpringAnimationViewObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteSpringAnimationViewObj.m; sourceTree = "<group>"; };
+		90C2E5FB20B5BB6700A105F1 /* SteAnimationMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationMaskView.m; sourceTree = "<group>"; };
+		90C2E5FC20B5BB6700A105F1 /* SteAnimationSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationSuperView.h; sourceTree = "<group>"; };
+		90C2E5FD20B5BB6700A105F1 /* SteAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationView.m; sourceTree = "<group>"; };
+		90C2E5FE20B5BB6700A105F1 /* SteSpringAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteSpringAnimationView.m; sourceTree = "<group>"; };
+		90C2E5FF20B5BB6700A105F1 /* SteAnimationViewProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationViewProtocols.h; sourceTree = "<group>"; };
+		90C2E60020B5BB6700A105F1 /* SteAnimationViewSuperObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationViewSuperObj.h; sourceTree = "<group>"; };
+		90C2E60120B5BB6700A105F1 /* SteSpringAnimationViewObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteSpringAnimationViewObj.h; sourceTree = "<group>"; };
+		90C2E60220B5BB6700A105F1 /* SteAnimationViewObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationViewObj.h; sourceTree = "<group>"; };
+		90C2E60320B5BB6700A105F1 /* SteAnimationSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationSuperView.m; sourceTree = "<group>"; };
+		90C2E60420B5BB6700A105F1 /* SteAnimationMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationMaskView.h; sourceTree = "<group>"; };
+		90C2E60E20B5BC4000A105F1 /* SteSpringFromCentreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteSpringFromCentreViewController.m; sourceTree = "<group>"; };
+		90C2E60F20B5BC4000A105F1 /* SteSpringFromCentreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteSpringFromCentreViewController.h; sourceTree = "<group>"; };
+		90C2E61120B5BC4000A105F1 /* SteCommonActionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonActionPopView.m; sourceTree = "<group>"; };
+		90C2E61220B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonSingleTitleAndActionView.m; sourceTree = "<group>"; };
+		90C2E61320B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonDoubleTitleAndDoubleActionView.m; sourceTree = "<group>"; };
+		90C2E61420B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonDoubleTitleAndActionView.m; sourceTree = "<group>"; };
+		90C2E61520B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteCommonSingleTitleAndDoubleActionView.h; sourceTree = "<group>"; };
+		90C2E61620B5BC4000A105F1 /* SteCommonActionPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteCommonActionPopView.h; sourceTree = "<group>"; };
+		90C2E61720B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteCommonSingleTitleAndActionView.h; sourceTree = "<group>"; };
+		90C2E61820B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteCommonDoubleTitleAndDoubleActionView.h; sourceTree = "<group>"; };
+		90C2E61920B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonSingleTitleAndDoubleActionView.m; sourceTree = "<group>"; };
+		90C2E61A20B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteCommonDoubleTitleAndActionView.h; sourceTree = "<group>"; };
+		90C2E62120B5BC5500A105F1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		90DD7EC020B44A6E00F9BD5F /* Toast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DD7EC320B44A6E00F9BD5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90DD7EC420B44A6E00F9BD5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +109,26 @@
 		90DD7EE320B44A7000F9BD5F /* ToastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DD7EE720B44A7000F9BD5F /* ToastUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastUITests.m; sourceTree = "<group>"; };
 		90DD7EE920B44A7000F9BD5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90DD7EF620B44E1600F9BD5F /* UIColor+SteAddtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SteAddtion.h"; sourceTree = "<group>"; };
+		90DD7EF720B44E1600F9BD5F /* SteFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteFont.h; sourceTree = "<group>"; };
+		90DD7EF820B44E1600F9BD5F /* SteColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteColors.h; sourceTree = "<group>"; };
+		90DD7EF920B44E1600F9BD5F /* UIColor+SteAddtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SteAddtion.m"; sourceTree = "<group>"; };
+		90DD7EFA20B44E1600F9BD5F /* SteColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteColors.m; sourceTree = "<group>"; };
+		90DD7EFB20B44E1600F9BD5F /* SteFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteFont.m; sourceTree = "<group>"; };
+		90DD7F0020B44E1E00F9BD5F /* AnimationSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationSuperView.m; sourceTree = "<group>"; };
+		90DD7F0120B44E1E00F9BD5F /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
+		90DD7F0220B44E1E00F9BD5F /* PopAnimationObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimationObj.h; sourceTree = "<group>"; };
+		90DD7F0320B44E1E00F9BD5F /* AnimationViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewCtrl.h; sourceTree = "<group>"; };
+		90DD7F0420B44E1E00F9BD5F /* PopAnimationSuperObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimationSuperObj.h; sourceTree = "<group>"; };
+		90DD7F0520B44E1E00F9BD5F /* AnimationSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationSuperView.h; sourceTree = "<group>"; };
+		90DD7F0620B44E1E00F9BD5F /* AnimationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationDelegate.h; sourceTree = "<group>"; };
+		90DD7F0720B44E1E00F9BD5F /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
+		90DD7F0820B44E1E00F9BD5F /* AnimationViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewCtrl.m; sourceTree = "<group>"; };
+		90DD7F0920B44E1E00F9BD5F /* PopAnimationObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimationObj.m; sourceTree = "<group>"; };
+		90DD7F0A20B44E1E00F9BD5F /* PopAnimationSuperObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimationSuperObj.m; sourceTree = "<group>"; };
+		AB3C33036867D5E1FE6F146D /* Pods-ToastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToastTests/Pods-ToastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4D145E92A40972580C819FD /* Pods-ToastUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToastUITests/Pods-ToastUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3DB0F7D7FA8D0998BF9C875 /* libPods-Toast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Toast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52251483322AECDF6320AE2E /* libPods-Toast.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D18231CB181FFD4E5DD0231 /* libPods-ToastTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +152,80 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F9DC9FEB680BB4CD0FFEB5 /* libPods-ToastUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AA5761D07316BCEC8554EDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB0F7D7FA8D0998BF9C875 /* libPods-Toast.a */,
+				79EDB7ADB32E643E6BF63B59 /* libPods-ToastTests.a */,
+				4631EFA8801BBEA91A69A91C /* libPods-ToastUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90C2E5F520B5BB6700A105F1 /* ToastInViewVersion2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				90C2E5FC20B5BB6700A105F1 /* SteAnimationSuperView.h */,
+				90C2E60320B5BB6700A105F1 /* SteAnimationSuperView.m */,
+				90C2E60020B5BB6700A105F1 /* SteAnimationViewSuperObj.h */,
+				90C2E5F620B5BB6700A105F1 /* SteAnimationViewSuperObj.m */,
+				90C2E60420B5BB6700A105F1 /* SteAnimationMaskView.h */,
+				90C2E5FB20B5BB6700A105F1 /* SteAnimationMaskView.m */,
+				90C2E5F720B5BB6700A105F1 /* SteSpringAnimationView.h */,
+				90C2E5FE20B5BB6700A105F1 /* SteSpringAnimationView.m */,
+				90C2E5FF20B5BB6700A105F1 /* SteAnimationViewProtocols.h */,
+				90C2E60120B5BB6700A105F1 /* SteSpringAnimationViewObj.h */,
+				90C2E5FA20B5BB6700A105F1 /* SteSpringAnimationViewObj.m */,
+				90C2E5F820B5BB6700A105F1 /* SteAnimationView.h */,
+				90C2E5FD20B5BB6700A105F1 /* SteAnimationView.m */,
+				90C2E60220B5BB6700A105F1 /* SteAnimationViewObj.h */,
+				90C2E5F920B5BB6700A105F1 /* SteAnimationViewObj.m */,
+			);
+			path = ToastInViewVersion2.0;
+			sourceTree = "<group>";
+		};
+		90C2E60C20B5BC4000A105F1 /* Version3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				90C2E60D20B5BC4000A105F1 /* Controllers */,
+				90C2E61020B5BC4000A105F1 /* Views */,
+			);
+			path = Version3.0;
+			sourceTree = "<group>";
+		};
+		90C2E60D20B5BC4000A105F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				90C2E60E20B5BC4000A105F1 /* SteSpringFromCentreViewController.m */,
+				90C2E60F20B5BC4000A105F1 /* SteSpringFromCentreViewController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		90C2E61020B5BC4000A105F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90C2E61620B5BC4000A105F1 /* SteCommonActionPopView.h */,
+				90C2E61120B5BC4000A105F1 /* SteCommonActionPopView.m */,
+				90C2E61720B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.h */,
+				90C2E61220B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m */,
+				90C2E61A20B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.h */,
+				90C2E61420B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.m */,
+				90C2E61820B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.h */,
+				90C2E61320B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m */,
+				90C2E61520B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.h */,
+				90C2E61920B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		90DD7EB720B44A6E00F9BD5F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +233,8 @@
 				90DD7EDB20B44A7000F9BD5F /* ToastTests */,
 				90DD7EE620B44A7000F9BD5F /* ToastUITests */,
 				90DD7EC120B44A6E00F9BD5F /* Products */,
+				9417263BBB48CF7FA5D9824C /* Pods */,
+				2AA5761D07316BCEC8554EDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +251,15 @@
 		90DD7EC220B44A6E00F9BD5F /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				90DD7EC320B44A6E00F9BD5F /* AppDelegate.h */,
-				90DD7EC420B44A6E00F9BD5F /* AppDelegate.m */,
+				90DD7EF520B44E1600F9BD5F /* Categarys */,
+				90DD7EFF20B44E1E00F9BD5F /* ToastInViewVersion1.0 */,
+				90C2E5F520B5BB6700A105F1 /* ToastInViewVersion2.0 */,
+				90C2E60C20B5BC4000A105F1 /* Version3.0 */,
 				90DD7EC620B44A6E00F9BD5F /* ViewController.h */,
 				90DD7EC720B44A6E00F9BD5F /* ViewController.m */,
+				90DD7EC420B44A6E00F9BD5F /* AppDelegate.m */,
+				90DD7EC320B44A6E00F9BD5F /* AppDelegate.h */,
+				90C2E62120B5BC5500A105F1 /* PrefixHeader.pch */,
 				90DD7EC920B44A6E00F9BD5F /* Main.storyboard */,
 				90DD7ECC20B44A7000F9BD5F /* Assets.xcassets */,
 				90DD7ECE20B44A7000F9BD5F /* LaunchScreen.storyboard */,
@@ -132,6 +287,50 @@
 			path = ToastUITests;
 			sourceTree = "<group>";
 		};
+		90DD7EF520B44E1600F9BD5F /* Categarys */ = {
+			isa = PBXGroup;
+			children = (
+				90DD7EF620B44E1600F9BD5F /* UIColor+SteAddtion.h */,
+				90DD7EF920B44E1600F9BD5F /* UIColor+SteAddtion.m */,
+				90DD7EF720B44E1600F9BD5F /* SteFont.h */,
+				90DD7EF820B44E1600F9BD5F /* SteColors.h */,
+				90DD7EFA20B44E1600F9BD5F /* SteColors.m */,
+				90DD7EFB20B44E1600F9BD5F /* SteFont.m */,
+			);
+			path = Categarys;
+			sourceTree = "<group>";
+		};
+		90DD7EFF20B44E1E00F9BD5F /* ToastInViewVersion1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				90DD7F0020B44E1E00F9BD5F /* AnimationSuperView.m */,
+				90DD7F0120B44E1E00F9BD5F /* AnimationView.h */,
+				90DD7F0220B44E1E00F9BD5F /* PopAnimationObj.h */,
+				90DD7F0320B44E1E00F9BD5F /* AnimationViewCtrl.h */,
+				90DD7F0420B44E1E00F9BD5F /* PopAnimationSuperObj.h */,
+				90DD7F0520B44E1E00F9BD5F /* AnimationSuperView.h */,
+				90DD7F0620B44E1E00F9BD5F /* AnimationDelegate.h */,
+				90DD7F0720B44E1E00F9BD5F /* AnimationView.m */,
+				90DD7F0820B44E1E00F9BD5F /* AnimationViewCtrl.m */,
+				90DD7F0920B44E1E00F9BD5F /* PopAnimationObj.m */,
+				90DD7F0A20B44E1E00F9BD5F /* PopAnimationSuperObj.m */,
+			);
+			path = ToastInViewVersion1.0;
+			sourceTree = "<group>";
+		};
+		9417263BBB48CF7FA5D9824C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				614344B187823FBA05408992 /* Pods-Toast.debug.xcconfig */,
+				847AABD766BD8D35ADE2EB47 /* Pods-Toast.release.xcconfig */,
+				AB3C33036867D5E1FE6F146D /* Pods-ToastTests.debug.xcconfig */,
+				85C8C9DA69C7D988D728BB9E /* Pods-ToastTests.release.xcconfig */,
+				C4D145E92A40972580C819FD /* Pods-ToastUITests.debug.xcconfig */,
+				0E29CF65853C20A2DA10E835 /* Pods-ToastUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90DD7EEC20B44A7000F9BD5F /* Build configuration list for PBXNativeTarget "Toast" */;
 			buildPhases = (
+				6926F389DB7010CB58ACBB0A /* [CP] Check Pods Manifest.lock */,
 				90DD7EBC20B44A6E00F9BD5F /* Sources */,
 				90DD7EBD20B44A6E00F9BD5F /* Frameworks */,
 				90DD7EBE20B44A6E00F9BD5F /* Resources */,
@@ -156,6 +356,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90DD7EEF20B44A7000F9BD5F /* Build configuration list for PBXNativeTarget "ToastTests" */;
 			buildPhases = (
+				48F490D1A8FEC60346AF945C /* [CP] Check Pods Manifest.lock */,
 				90DD7ED420B44A7000F9BD5F /* Sources */,
 				90DD7ED520B44A7000F9BD5F /* Frameworks */,
 				90DD7ED620B44A7000F9BD5F /* Resources */,
@@ -174,6 +375,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90DD7EF220B44A7000F9BD5F /* Build configuration list for PBXNativeTarget "ToastUITests" */;
 			buildPhases = (
+				3710D94E085C2CA4BEE8345B /* [CP] Check Pods Manifest.lock */,
 				90DD7EDF20B44A7000F9BD5F /* Sources */,
 				90DD7EE020B44A7000F9BD5F /* Frameworks */,
 				90DD7EE120B44A7000F9BD5F /* Resources */,
@@ -257,14 +459,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3710D94E085C2CA4BEE8345B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToastUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48F490D1A8FEC60346AF945C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToastTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6926F389DB7010CB58ACBB0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Toast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90DD7EBC20B44A6E00F9BD5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C2E60B20B5BB6800A105F1 /* SteAnimationSuperView.m in Sources */,
 				90DD7EC820B44A6E00F9BD5F /* ViewController.m in Sources */,
+				90DD7F0B20B44E1F00F9BD5F /* AnimationSuperView.m in Sources */,
+				90C2E60620B5BB6800A105F1 /* SteAnimationViewObj.m in Sources */,
+				90C2E62020B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.m in Sources */,
+				90C2E61D20B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m in Sources */,
+				90C2E60A20B5BB6800A105F1 /* SteSpringAnimationView.m in Sources */,
+				90C2E60520B5BB6800A105F1 /* SteAnimationViewSuperObj.m in Sources */,
+				90C2E60920B5BB6800A105F1 /* SteAnimationView.m in Sources */,
+				90C2E61B20B5BC4000A105F1 /* SteSpringFromCentreViewController.m in Sources */,
+				90DD7F0D20B44E1F00F9BD5F /* AnimationViewCtrl.m in Sources */,
+				90C2E60720B5BB6800A105F1 /* SteSpringAnimationViewObj.m in Sources */,
 				90DD7ED320B44A7000F9BD5F /* main.m in Sources */,
+				90DD7EFD20B44E1600F9BD5F /* SteColors.m in Sources */,
+				90C2E61E20B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m in Sources */,
+				90DD7EFC20B44E1600F9BD5F /* UIColor+SteAddtion.m in Sources */,
+				90DD7F0E20B44E1F00F9BD5F /* PopAnimationObj.m in Sources */,
+				90C2E60820B5BB6800A105F1 /* SteAnimationMaskView.m in Sources */,
+				90C2E61F20B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.m in Sources */,
+				90DD7F0C20B44E1F00F9BD5F /* AnimationView.m in Sources */,
+				90C2E61C20B5BC4000A105F1 /* SteCommonActionPopView.m in Sources */,
 				90DD7EC520B44A6E00F9BD5F /* AppDelegate.m in Sources */,
+				90DD7EFE20B44E1600F9BD5F /* SteFont.m in Sources */,
+				90DD7F0F20B44E1F00F9BD5F /* PopAnimationSuperObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,11 +711,15 @@
 		};
 		90DD7EED20B44A7000F9BD5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 614344B187823FBA05408992 /* Pods-Toast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3Y5FLL6V8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Toast/PrefixHeader.pch";
 				INFOPLIST_FILE = Toast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +732,15 @@
 		};
 		90DD7EEE20B44A7000F9BD5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847AABD766BD8D35ADE2EB47 /* Pods-Toast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3Y5FLL6V8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Toast/PrefixHeader.pch";
 				INFOPLIST_FILE = Toast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +753,7 @@
 		};
 		90DD7EF020B44A7000F9BD5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3C33036867D5E1FE6F146D /* Pods-ToastTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +773,7 @@
 		};
 		90DD7EF120B44A7000F9BD5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C8C9DA69C7D988D728BB9E /* Pods-ToastTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +793,7 @@
 		};
 		90DD7EF320B44A7000F9BD5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4D145E92A40972580C819FD /* Pods-ToastUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3Y5FLL6V8;
@@ -521,6 +812,7 @@
 		};
 		90DD7EF420B44A7000F9BD5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E29CF65853C20A2DA10E835 /* Pods-ToastUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3Y5FLL6V8;

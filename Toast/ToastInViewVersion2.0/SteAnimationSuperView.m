@@ -65,7 +65,6 @@
                 make.left.equalTo(cvi.mas_safeAreaLayoutGuideLeft);
                 make.right.equalTo(cvi.mas_safeAreaLayoutGuideRight);
             }];*/
-            
            maskView.translatesAutoresizingMaskIntoConstraints = NO;
            NSLayoutConstraint* leading = [maskView.leadingAnchor constraintEqualToAnchor:cvi.safeAreaLayoutGuide.leadingAnchor];
            NSLayoutConstraint*  trailing = [maskView.trailingAnchor constraintEqualToAnchor:cvi.safeAreaLayoutGuide.trailingAnchor];
@@ -82,12 +81,14 @@
             
             //.topLayoutGuide.bottomAnchor  //UIViewController
             //.bottomLayoutGuide.topAnchor  //UIViewController
+            
             maskView.translatesAutoresizingMaskIntoConstraints = NO;
             NSLayoutConstraint* leading = [maskView.leadingAnchor constraintEqualToAnchor:cvi.leadingAnchor];
             NSLayoutConstraint*  trailing = [maskView.trailingAnchor constraintEqualToAnchor:cvi.trailingAnchor];
-            NSLayoutConstraint* top = [maskView.topAnchor constraintEqualToAnchor:cvi.bottomAnchor];
+            NSLayoutConstraint* top = [maskView.topAnchor constraintEqualToAnchor:cvi.topAnchor];
             NSLayoutConstraint* bottom = [maskView.bottomAnchor constraintEqualToAnchor:cvi.bottomAnchor];
             [NSLayoutConstraint activateConstraints:@[leading,trailing,top,bottom]];
+            
         }
         
         [self.aniObj steShowAnimationView:self inContainterView:self.superview];

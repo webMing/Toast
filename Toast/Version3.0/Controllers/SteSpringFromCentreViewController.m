@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 
 @interface SteSpringFromCentreViewController ()
+
 @property (strong, nonatomic)  UIView *bottomView;
 @property (strong, nonatomic)  UIView *contentView;
 
@@ -29,10 +30,18 @@
 //    return self;
 //}
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.modalPresentationStyle  = UIModalPresentationCustom;
+    }
+    return self;
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.modalPresentationStyle  = UIModalPresentationOverFullScreen;
+        self.modalPresentationStyle  = UIModalPresentationCustom;
     }
     return self;
 }
@@ -44,12 +53,11 @@
     return vc;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        self.modalPresentationStyle  = UIModalPresentationCustom;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (!self.swapView) {
+        @throw [NSException exceptionWithName:NSGenericException reason:@"please use +loadWithInsetView:(UIView*) method to init and the parameter can not nil " userInfo:nil];
     }
-    return self;
 }
 
 - (void)viewDidLoad {
@@ -170,45 +178,6 @@
 }
 
 #pragma mark- PrivateMethod
-/*
- + (UIColor *)colorWithHexString:(NSString *)hexString {
- CGFloat alpha, red, blue, green;
- 
- NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
- switch ([colorString length]) {
- case 3: // #RGB
- alpha = 1.0f;
- red   = colorComponentFrom(colorString, 0, 1);
- green = colorComponentFrom(colorString, 1, 1);
- blue  = colorComponentFrom(colorString, 2, 1);
- break;
- 
- case 4: // #ARGB
- alpha = colorComponentFrom(colorString, 0, 1);
- red   = colorComponentFrom(colorString, 1, 1);
- green = colorComponentFrom(colorString, 2, 1);
- blue  = colorComponentFrom(colorString, 3, 1);
- break;
- 
- case 6: // #RRGGBB
- alpha = 1.0f;
- red   = colorComponentFrom(colorString, 0, 2);
- green = colorComponentFrom(colorString, 2, 2);
- blue  = colorComponentFrom(colorString, 4, 2);
- break;
- 
- case 8: // #AARRGGBB
- alpha = colorComponentFrom(colorString, 0, 2);
- red   = colorComponentFrom(colorString, 2, 2);
- green = colorComponentFrom(colorString, 4, 2);
- blue  = colorComponentFrom(colorString, 6, 2);
- break;
- 
- default:
- return nil;
- }
- return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
- }
- */
+
 
 @end
