@@ -47,7 +47,6 @@ static const CGFloat ActionHeight = 50;
      1. 解决在 alloc 中添加约束时因为super.view = nil造成崩溃
      2. 第二种方法是 重写showInContainterView: withAnimationObj: 然后在其中完成布局;
      */
-    
     if (self.superview) {
         [self mas_makeConstraints:^(MASConstraintMaker *make) {
             //将来要把这个定义迁移出来.

@@ -1,9 +1,8 @@
 //
 //  SteCommonSingleTitleAndDoubleActionView.m
-//  LvTaotao
 //
-//  Created by XMYY-20 on 2018/5/16.
-//  Copyright © 2018年 Kerwin. All rights reserved.
+//  Created by Stephanie on 2018/5/16.
+//  Copyright © 2018年 Stephanie. All rights reserved.
 //
 
 #import "SteCommonSingleTitleAndDoubleActionView.h"
@@ -16,31 +15,96 @@
 
 @implementation SteCommonSingleTitleAndDoubleActionView
 
+
 #pragma mark- LifeCicle
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self setUpUI];
+        [self setUpViews];
+        [self addCustomViews];
+        [self layoutCustomViews];
     }
     return self;
 }
 
-#pragma mark- CreateUI
-- (void)setUpUI {
-    [self cAddSubViews];
-    [self cLayoutSubViews];
+#pragma mark- SetUpView
+
+- (void)setUpViews {
+    
+}
+
+- (void)addCustomViews {
+    [self addSubview:self.titleLb];
+    [self addSubview:self.seperaterLb];
+    [self addSubview:self.vSeperaterLb];
+    [self addSubview:self.rightActionBtn];
+    [self addSubview:self.leftActionBtn];
+}
+- (void)layoutCustomViews {
+    [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.offset(10.0f);
+        make.trailing.offset(-10.0f);
+    }];
+    
+    [self.seperaterLb mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.titleLb.mas_bottom).offset(10);
+        make.leading.trailing.equalTo(self);
+        make.height.mas_equalTo(1/[UIScreen mainScreen].scale);
+    }];
+    
+    [self.vSeperaterLb mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(45.0f);
+        make.width.mas_equalTo(1/[UIScreen mainScreen].scale);
+        make.centerX.equalTo(self);
+        make.top.equalTo(self.seperaterLb.mas_bottom);
+        make.bottom.equalTo(self.mas_bottom);
+    }];
+    
+    [self.rightActionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self);
+        make.trailing.equalTo(self.vSeperaterLb.mas_leading);
+        make.bottom.top.equalTo(self.vSeperaterLb);
+    }];
+    
+    [self.leftActionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.top.equalTo(self.vSeperaterLb);
+        make.leading.equalTo(self.vSeperaterLb);
+        make.trailing.equalTo(self.mas_trailing);
+    }];
 }
 
 #pragma mark- EventRespone
 
 - (void)leftAction {
-    [self dimissSelfWithType:SteAtionViewLeffAtionType];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(steDissmissAnimationView:inContainterView:) ]) {
+        [self.delegate steDissmissAnimationView:self inContainterView:self.superview];
+    }
 }
 
 - (void)rightAction {
-    [self dimissSelfWithType:SteAtionViewRightAtionType];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(steDissmissAnimationView:inContainterView:) ]) {
+        [self.delegate steDissmissAnimationView:self inContainterView:self.superview];
+    }
 }
 
-#pragma mark- CustomDelegateMethod
+#pragma mark- SteViewControllerAnimationObjDelegate
+/* 只用于更新View的状态*/
+- (void)steWillShowView:(UIView *)view inContainterView:(UIView *)cview {
+    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+}
+
+- (void)steDidShowView:(UIView *)view inContainterView:(UIView *)cview {
+    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+}
+
+- (void)steWillRemoveView:(UIView *)view fromContainView:(UIView *)conv {
+    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+}
+
+- (void)steDidRemoveView:(UIView *)view fromContainView:(UIView *)conv {
+    /*只能用作更新View状态*/
+    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+}
 
 #pragma mark- DelegateMethod
 
@@ -97,47 +161,5 @@
 }
 
 #pragma mark- PrivateMethod
-
-- (void)cAddSubViews {
-    [self addSubview:self.titleLb];
-    [self addSubview:self.seperaterLb];
-    [self addSubview:self.vSeperaterLb];
-    [self addSubview:self.rightActionBtn];
-    [self addSubview:self.leftActionBtn];
-}
-
-- (void)cLayoutSubViews {
-    
-    [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.top.offset(10.0f);
-        make.trailing.offset(-10.0f);
-    }];
-    
-    [self.seperaterLb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.titleLb.mas_bottom).offset(10);
-        make.leading.trailing.equalTo(self);
-        make.height.mas_equalTo(1/[UIScreen mainScreen].scale);
-    }];
-    
-    [self.vSeperaterLb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(45.0f);
-        make.width.mas_equalTo(1/[UIScreen mainScreen].scale);
-        make.centerX.equalTo(self);
-        make.top.equalTo(self.seperaterLb.mas_bottom);
-        make.bottom.equalTo(self.mas_bottom);
-    }];
-    
-    [self.rightActionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self);
-        make.trailing.equalTo(self.vSeperaterLb.mas_leading);
-        make.bottom.top.equalTo(self.vSeperaterLb);
-    }];
-    
-    [self.leftActionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.top.equalTo(self.vSeperaterLb);
-        make.leading.equalTo(self.vSeperaterLb);
-        make.trailing.equalTo(self.mas_trailing);
-    }];
-}
 
 @end

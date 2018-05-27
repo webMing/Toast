@@ -10,6 +10,9 @@
 		52251483322AECDF6320AE2E /* libPods-Toast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DB0F7D7FA8D0998BF9C875 /* libPods-Toast.a */; };
 		6D18231CB181FFD4E5DD0231 /* libPods-ToastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EDB7ADB32E643E6BF63B59 /* libPods-ToastTests.a */; };
 		77F9DC9FEB680BB4CD0FFEB5 /* libPods-ToastUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4631EFA8801BBEA91A69A91C /* libPods-ToastUITests.a */; };
+		9057BEC020B9917500FC5C22 /* SteViewControllerAnimationSuperObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9057BEBF20B9917500FC5C22 /* SteViewControllerAnimationSuperObj.m */; };
+		9057BEC320B9919300FC5C22 /* SteViewControllerAnimationSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9057BEC220B9919300FC5C22 /* SteViewControllerAnimationSuperView.m */; };
+		9057BEC820B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9057BEC720B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m */; };
 		90C2E60520B5BB6800A105F1 /* SteAnimationViewSuperObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5F620B5BB6700A105F1 /* SteAnimationViewSuperObj.m */; };
 		90C2E60620B5BB6800A105F1 /* SteAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5F920B5BB6700A105F1 /* SteAnimationViewObj.m */; };
 		90C2E60720B5BB6800A105F1 /* SteSpringAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FA20B5BB6700A105F1 /* SteSpringAnimationViewObj.m */; };
@@ -17,7 +20,7 @@
 		90C2E60920B5BB6800A105F1 /* SteAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FD20B5BB6700A105F1 /* SteAnimationView.m */; };
 		90C2E60A20B5BB6800A105F1 /* SteSpringAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FE20B5BB6700A105F1 /* SteSpringAnimationView.m */; };
 		90C2E60B20B5BB6800A105F1 /* SteAnimationSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E60320B5BB6700A105F1 /* SteAnimationSuperView.m */; };
-		90C2E61B20B5BC4000A105F1 /* SteSpringFromCentreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E60E20B5BC4000A105F1 /* SteSpringFromCentreViewController.m */; };
+		90C2E61B20B5BC4000A105F1 /* SteBaseAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E60E20B5BC4000A105F1 /* SteBaseAnimationViewController.m */; };
 		90C2E61C20B5BC4000A105F1 /* SteCommonActionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61120B5BC4000A105F1 /* SteCommonActionPopView.m */; };
 		90C2E61D20B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61220B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m */; };
 		90C2E61E20B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E61320B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m */; };
@@ -65,6 +68,13 @@
 		79EDB7ADB32E643E6BF63B59 /* libPods-ToastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847AABD766BD8D35ADE2EB47 /* Pods-Toast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toast/Pods-Toast.release.xcconfig"; sourceTree = "<group>"; };
 		85C8C9DA69C7D988D728BB9E /* Pods-ToastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToastTests/Pods-ToastTests.release.xcconfig"; sourceTree = "<group>"; };
+		9057BEBE20B9917500FC5C22 /* SteViewControllerAnimationSuperObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteViewControllerAnimationSuperObj.h; sourceTree = "<group>"; };
+		9057BEBF20B9917500FC5C22 /* SteViewControllerAnimationSuperObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteViewControllerAnimationSuperObj.m; sourceTree = "<group>"; };
+		9057BEC120B9919300FC5C22 /* SteViewControllerAnimationSuperView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteViewControllerAnimationSuperView.h; sourceTree = "<group>"; };
+		9057BEC220B9919300FC5C22 /* SteViewControllerAnimationSuperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteViewControllerAnimationSuperView.m; sourceTree = "<group>"; };
+		9057BEC420B992C100FC5C22 /* SteViewControllerAnimationProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteViewControllerAnimationProtocols.h; sourceTree = "<group>"; };
+		9057BEC620B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteViewControllerSpringAnimationViewObj.h; sourceTree = "<group>"; };
+		9057BEC720B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteViewControllerSpringAnimationViewObj.m; sourceTree = "<group>"; };
 		90C2E5F620B5BB6700A105F1 /* SteAnimationViewSuperObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationViewSuperObj.m; sourceTree = "<group>"; };
 		90C2E5F720B5BB6700A105F1 /* SteSpringAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteSpringAnimationView.h; sourceTree = "<group>"; };
 		90C2E5F820B5BB6700A105F1 /* SteAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationView.h; sourceTree = "<group>"; };
@@ -80,8 +90,8 @@
 		90C2E60220B5BB6700A105F1 /* SteAnimationViewObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationViewObj.h; sourceTree = "<group>"; };
 		90C2E60320B5BB6700A105F1 /* SteAnimationSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationSuperView.m; sourceTree = "<group>"; };
 		90C2E60420B5BB6700A105F1 /* SteAnimationMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationMaskView.h; sourceTree = "<group>"; };
-		90C2E60E20B5BC4000A105F1 /* SteSpringFromCentreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteSpringFromCentreViewController.m; sourceTree = "<group>"; };
-		90C2E60F20B5BC4000A105F1 /* SteSpringFromCentreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteSpringFromCentreViewController.h; sourceTree = "<group>"; };
+		90C2E60E20B5BC4000A105F1 /* SteBaseAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteBaseAnimationViewController.m; sourceTree = "<group>"; };
+		90C2E60F20B5BC4000A105F1 /* SteBaseAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteBaseAnimationViewController.h; sourceTree = "<group>"; };
 		90C2E61120B5BC4000A105F1 /* SteCommonActionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonActionPopView.m; sourceTree = "<group>"; };
 		90C2E61220B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonSingleTitleAndActionView.m; sourceTree = "<group>"; };
 		90C2E61320B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteCommonDoubleTitleAndDoubleActionView.m; sourceTree = "<group>"; };
@@ -169,6 +179,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9057BEC520B9930600FC5C22 /* AnimationObj */ = {
+			isa = PBXGroup;
+			children = (
+				9057BEC620B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.h */,
+				9057BEC720B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m */,
+			);
+			path = AnimationObj;
+			sourceTree = "<group>";
+		};
 		90C2E5F520B5BB6700A105F1 /* ToastInViewVersion2.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +213,7 @@
 		90C2E60C20B5BC4000A105F1 /* Version3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				9057BEC520B9930600FC5C22 /* AnimationObj */,
 				90C2E60D20B5BC4000A105F1 /* Controllers */,
 				90C2E61020B5BC4000A105F1 /* Views */,
 			);
@@ -203,8 +223,13 @@
 		90C2E60D20B5BC4000A105F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				90C2E60E20B5BC4000A105F1 /* SteSpringFromCentreViewController.m */,
-				90C2E60F20B5BC4000A105F1 /* SteSpringFromCentreViewController.h */,
+				90C2E60F20B5BC4000A105F1 /* SteBaseAnimationViewController.h */,
+				90C2E60E20B5BC4000A105F1 /* SteBaseAnimationViewController.m */,
+				9057BEBE20B9917500FC5C22 /* SteViewControllerAnimationSuperObj.h */,
+				9057BEBF20B9917500FC5C22 /* SteViewControllerAnimationSuperObj.m */,
+				9057BEC120B9919300FC5C22 /* SteViewControllerAnimationSuperView.h */,
+				9057BEC220B9919300FC5C22 /* SteViewControllerAnimationSuperView.m */,
+				9057BEC420B992C100FC5C22 /* SteViewControllerAnimationProtocols.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -524,13 +549,15 @@
 				90C2E60B20B5BB6800A105F1 /* SteAnimationSuperView.m in Sources */,
 				90DD7EC820B44A6E00F9BD5F /* ViewController.m in Sources */,
 				90DD7F0B20B44E1F00F9BD5F /* AnimationSuperView.m in Sources */,
+				9057BEC820B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m in Sources */,
 				90C2E60620B5BB6800A105F1 /* SteAnimationViewObj.m in Sources */,
 				90C2E62020B5BC4000A105F1 /* SteCommonSingleTitleAndDoubleActionView.m in Sources */,
 				90C2E61D20B5BC4000A105F1 /* SteCommonSingleTitleAndActionView.m in Sources */,
+				9057BEC020B9917500FC5C22 /* SteViewControllerAnimationSuperObj.m in Sources */,
 				90C2E60A20B5BB6800A105F1 /* SteSpringAnimationView.m in Sources */,
 				90C2E60520B5BB6800A105F1 /* SteAnimationViewSuperObj.m in Sources */,
 				90C2E60920B5BB6800A105F1 /* SteAnimationView.m in Sources */,
-				90C2E61B20B5BC4000A105F1 /* SteSpringFromCentreViewController.m in Sources */,
+				90C2E61B20B5BC4000A105F1 /* SteBaseAnimationViewController.m in Sources */,
 				90DD7F0D20B44E1F00F9BD5F /* AnimationViewCtrl.m in Sources */,
 				90C2E60720B5BB6800A105F1 /* SteSpringAnimationViewObj.m in Sources */,
 				90DD7ED320B44A7000F9BD5F /* main.m in Sources */,
@@ -539,6 +566,7 @@
 				90DD7EFC20B44E1600F9BD5F /* UIColor+SteAddtion.m in Sources */,
 				90DD7F0E20B44E1F00F9BD5F /* PopAnimationObj.m in Sources */,
 				90C2E60820B5BB6800A105F1 /* SteAnimationMaskView.m in Sources */,
+				9057BEC320B9919300FC5C22 /* SteViewControllerAnimationSuperView.m in Sources */,
 				90C2E61F20B5BC4000A105F1 /* SteCommonDoubleTitleAndActionView.m in Sources */,
 				90DD7F0C20B44E1F00F9BD5F /* AnimationView.m in Sources */,
 				90C2E61C20B5BC4000A105F1 /* SteCommonActionPopView.m in Sources */,

@@ -14,13 +14,15 @@
 #import "SteAnimationView.h"
 #import "SteAnimationViewObj.h"
 
-#import "SteSpringFromCentreViewController.h"
+#import "SteBaseAnimationViewController.h"
+#import "SteViewControllerSpringAnimationViewObj.h"
 #import "SteCommonSingleTitleAndDoubleActionView.h"
 
-@interface ViewController ()
+@interface ViewController () <SteBaseAnimationViewControllerDelegate>
 /** ActionBtn */
 @property (strong, nonatomic) UILabel *nameLb;
 
+@property (strong, nonatomic) NSPointerArray* weakPointerArray;
 @end
 
 @implementation ViewController
@@ -67,9 +69,17 @@
 #pragma mark- PrivateMethod
 
 - (void)toastType3 {
-     SteCommonSingleTitleAndDoubleActionView* view = [[SteCommonSingleTitleAndDoubleActionView alloc]init];
-    SteSpringFromCentreViewController* controller = [SteSpringFromCentreViewController loadWithInsetView:view];
-    [self presentViewController:controller animated:NO completion:nil];
+   
+    SteViewControllerSpringAnimationViewObj* animationObj = [[SteViewControllerSpringAnimationViewObj alloc]init];
+    SteCommonSingleTitleAndDoubleActionView* view = [[SteCommonSingleTitleAndDoubleActionView alloc]init];
+    SteBaseAnimationViewController* ctrl = [SteBaseAnimationViewController loadWithInsetView:view animationObj:animationObj];
+    ctrl.delegate = self;
+    [self presentViewController:ctrl animated:NO completion:nil];
+}
+
+-(void)steBaseAnimationViewController:(SteBaseAnimationViewController *)ctrl dissmissWithAnimationView:(SteViewControllerAnimationSuperView<SteViewControllerAnimationObjDelegate> *)animationView {
+    NSLog(@"----- %@",animationView);
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)toastType2 {
@@ -99,5 +109,36 @@
 }
 */
 
+/*
+ //初始化一个弱引用数组对象
+ _weakPointerArray = [NSPointerArray weakObjectsPointerArray];
+ for(int i=0;i<10;i++){
+ NSObject *obj = [NSObject new];
+ //往数组中添加对象
+ [_weakPointerArray addPointer:(__bridge void * _Nullable)(obj)];
+ }
+ //输出数组中的所有对象,如果没有对象会输出一个空数组
+ NSArray *array = [_weakPointerArray allObjects];
+ NSLog(@"%@",array);
+ 
+ id test = [_weakPointerArray pointerAtIndex:0];
+ [test description];
+ //输出数组中的元素个数,包括NULL
+ NSLog(@"%zd",_weakPointerArray.count);//此时输出:10,因为NSObject在for循环之后就被释放了
+ //先数组中添加一个NULL
+ [_weakPointerArray addPointer:NULL];
+ NSLog(@"%zd",_weakPointerArray.count);//输出:11
+ //清空数组中的所有NULL,注意:经过测试如果直接compact是无法清空NULL,需要在compact之前,调用一次[_weakPointerArray addPointer:NULL],才可以清空
+ [_weakPointerArray compact];
+ NSLog(@"%zd",_weakPointerArray.count);//输出:0
+ //注意:如果直接往_weakPointerArray中添加对象,那么addPointer方法执行完毕之后,NSObject会直接被释放掉
+ [_weakPointerArray addPointer:(__bridge void * _Nullable)([NSObject new])];
+ NSLog(@"%@",[_weakPointerArray allObjects]);//输出:空数组 NSPointArray[7633:454561] ()
+ //应该这样添加对象
+ NSObject *obj = [NSObject new];
+ [_weakPointerArray addPointer:(__bridge void * _Nullable)obj];
+ NSLog(@"%@",[_weakPointerArray allObjects]);//输出:NSPointArray[7633:454561] ("<NSObject: 0x6000000078c0>")
+ 
+ */
 
 @end
