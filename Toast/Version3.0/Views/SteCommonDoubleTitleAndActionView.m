@@ -25,6 +25,7 @@
     return self;
 }
 
+
 #pragma mark- SetUpView
 
 - (void)setUpView {

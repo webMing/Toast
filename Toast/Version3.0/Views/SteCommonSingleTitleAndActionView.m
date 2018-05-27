@@ -24,10 +24,26 @@
     return self;
 }
 
+/* 代码已经迁移到父类
+- (void)didMoveToSuperview {
+    if (self.superview) {
+        [self mas_makeConstraints:^(MASConstraintMaker *make) {
+            //将来要把这个定义迁移出来.
+            CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
+            //make.width.mas_equalTo(screenWidth * 0.7);
+            make.width.equalTo(@(screenWidth * 0.7));
+            make.height.equalTo(self.mas_width).multipliedBy(0.54);
+            make.center.equalTo(self.superview);
+        }];
+    }
+}
+ */
+
+
 #pragma mark- SetUpView
 
 - (void)setUpView {
-    
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)addCustomViews {

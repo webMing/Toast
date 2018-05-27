@@ -16,7 +16,7 @@
 
 #import "SteBaseAnimationViewController.h"
 #import "SteViewControllerSpringAnimationViewObj.h"
-#import "SteCommonSingleTitleAndDoubleActionView.h"
+#import "SteCommonSingleTitleAndActionView.h"
 
 @interface ViewController () <SteBaseAnimationViewControllerDelegate>
 /** ActionBtn */
@@ -69,9 +69,8 @@
 #pragma mark- PrivateMethod
 
 - (void)toastType3 {
-   
     SteViewControllerSpringAnimationViewObj* animationObj = [[SteViewControllerSpringAnimationViewObj alloc]init];
-    SteCommonSingleTitleAndDoubleActionView* view = [[SteCommonSingleTitleAndDoubleActionView alloc]init];
+    SteCommonSingleTitleAndActionView* view = [[SteCommonSingleTitleAndActionView alloc]init];
     SteBaseAnimationViewController* ctrl = [SteBaseAnimationViewController loadWithInsetView:view animationObj:animationObj];
     ctrl.delegate = self;
     [self presentViewController:ctrl animated:NO completion:nil];

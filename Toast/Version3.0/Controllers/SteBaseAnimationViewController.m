@@ -18,8 +18,8 @@
 
 @property (strong, nonatomic) UITapGestureRecognizer* tapGesture;
 
-@property (strong, nonatomic) UIView<SteViewControllerAnimationObjDelegate>* animationView;
-@property (strong, nonatomic) id<SteViewControllerAnimationViewDelegate> animationObj;
+@property (strong, nonatomic) SteViewControllerAnimationSuperView<SteViewControllerAnimationObjDelegate>* animationView;
+@property (strong, nonatomic) <SteViewControllerAnimationViewDelegate> animationObj;
 @end
 
 /*
@@ -67,11 +67,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+     [self.animationObj steShowAnimationView:self.animationView inContainterView:self.scrollContentView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.animationObj steShowAnimationView:self.animationView inContainterView:self.scrollContentView];
+    //动画不要写在这里; 会造成动画闪烁
 }
 
 - (void)didReceiveMemoryWarning {
