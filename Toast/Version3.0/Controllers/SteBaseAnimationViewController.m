@@ -11,7 +11,7 @@
 
 #import <Masonry/Masonry.h>
 
-@interface SteBaseAnimationViewController () <UIGestureRecognizerDelegate, SteViewControllerAnimationObjDelegate>
+@interface SteBaseAnimationViewController () <UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) UIScrollView* scrollView;
 @property (strong, nonatomic) UIView* scrollContentView;
@@ -19,13 +19,13 @@
 @property (strong, nonatomic) UITapGestureRecognizer* tapGesture;
 
 @property (strong, nonatomic) SteViewControllerAnimationSuperView<SteViewControllerAnimationObjDelegate>* animationView;
-@property (strong, nonatomic) <SteViewControllerAnimationViewDelegate> animationObj;
+@property (strong, nonatomic) id<SteViewControllerAnimationViewDelegate> animationObj;
 @end
 
 /*
  benifit>
  1.如果自定义View中含有输入框,可以结合KeyBoard框架一起使用来避免因为键盘遮挡输入框的问题
- 2.可以当做maskView的对象只能是animation.superView == ContainterView,因为动画结束动画需要对mask.backGroundColor进行处理.而maskView = animation.superView ==  ContainterView
+ 2.可以当做maskView的对象是animation.superView 或者是scrollView 因为动画结束动画需要对mask.backGroundColor进行处理.可以通过animationView 来获取maskView;
  */
 
 /*
@@ -42,7 +42,7 @@
     if (viewCtrl) {
         view.delegate = obj;
         [obj addDelegate:view];
-        [obj addDelegate:viewCtrl];
+        //[obj addDelegate:viewCtrl];
         //obj.delegate = viewCtrl;
         viewCtrl.animationObj = obj;
         viewCtrl.animationView = view;
@@ -67,12 +67,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-     [self.animationObj steShowAnimationView:self.animationView inContainterView:self.scrollContentView];
+    if (![self.view.subviews containsObject:self.animationView] && [self.animationObj respondsToSelector:@selector(steWillShowAnimationView:inContainterView:)]) {
+        [self.animationObj steWillShowAnimationView:self.animationView inContainterView:self.scrollContentView];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    //动画不要写在这里; 会造成动画闪烁
+    if (![self.view.subviews containsObject:self.animationView] && [self.animationObj respondsToSelector:@selector(steShowAnimationView:inContainterView:)]) {
+        [self.animationObj steShowAnimationView:self.animationView inContainterView:self.scrollContentView];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,7 +89,9 @@
 - (void)setUpView {
     [self.scrollContentView addGestureRecognizer:self.tapGesture];
     self.view.backgroundColor = [UIColor clearColor];
-    self.scrollContentView.backgroundColor = [[UIColor colorWithHex:0x050205]colorWithAlphaComponent:0.13];
+    //scrollView as maskView;
+    self.scrollView.backgroundColor = [[UIColor colorWithHex:0x050205]colorWithAlphaComponent:0.13];
+    self.scrollView.scrollEnabled = NO;
 }
 
 - (void)addCustomView {
@@ -122,7 +129,6 @@
          make.edges.insets = UIEdgeInsetsMake(0, 0, 0, 0);
          }];
          */
-        
         //.topLayoutGuide.bottomAnchor  //UIViewController
         //.bottomLayoutGuide.topAnchor  //UIViewController
         
@@ -148,12 +154,15 @@
     }
 }
 
+/*
 #pragma mark- SteViewControllerAnimationObjDelegate
+
 - (void)steDidRemoveView:(UIView*)view fromContainView:(UIView*)conv {
     if (_delegate && [_delegate respondsToSelector:@selector(steBaseAnimationViewController:dissmissWithAnimationView:)]) {
         [_delegate steBaseAnimationViewController:self dissmissWithAnimationView:self.animationView];
     }
 }
+ */
 
 #pragma mark- UIGestureRecognizerDelegate
 
@@ -190,6 +199,22 @@
         _tapGesture.delegate = self;
     }
     return _tapGesture;
+}
+
+- (void)setMaskViewBackGroundColor:(UIColor *)maskViewBackGroundColor {
+    self.scrollView.backgroundColor = maskViewBackGroundColor;
+}
+
+- (UIColor*)maskViewBackGroundColor {
+    return self.scrollView.backgroundColor;
+}
+
+- (void)setScrollEnable:(BOOL)scrollEnable {
+    self.scrollView.scrollEnabled = scrollEnable;
+}
+
+- (BOOL)isScrollEnable {
+    return self.scrollView.scrollEnabled;
 }
 
 - (void)setEnableMaskViewTapAction:(BOOL)enableMaskViewTapAction {

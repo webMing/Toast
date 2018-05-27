@@ -44,6 +44,10 @@ static const CGFloat ActionHeight = 50;
 - (void)didMoveToSuperview {
     
     /*
+     此方法共调用两次,
+     view add SuperView 时 self.super != nil;
+     view remove from superview 时, self.super = nil
+     
      1. 解决在 alloc 中添加约束时因为super.view = nil造成崩溃
      2. 第二种方法是 重写showInContainterView: withAnimationObj: 然后在其中完成布局;
      */
@@ -139,7 +143,7 @@ static const CGFloat ActionHeight = 50;
 }
 
 #pragma mark- EventRespone
-
+// 有些情况这种情况是需要写成这种形式;
 - (void)confirmAction {
     if (_delegate && [_delegate respondsToSelector:@selector(springAnimationViewConfirmWithView:)]) {
         [_delegate springAnimationViewConfirmWithView:self];
@@ -148,6 +152,38 @@ static const CGFloat ActionHeight = 50;
 }
 
 - (void)cancelAction {
+#warning 使用横向调用,还是纵向调用
+    /*
+     当AnimationView是透明的;如果写成下面这种形式：
+     if (_delegate && [_delegate respondsToSelector:@selector(springAnimationViewCancelWithView:)]) {
+     [_delegate springAnimationViewCancelWithView:self];
+     }
+     [self dimissSelf];
+     如果调用代理方法时候,父视图显示一个Toast,而这时候animationView 还没有消失;这种展示效果非常不好.
+     
+     一种解决方法是 [animation dimissView] 下沉到外部,具体逻辑如下：
+     animatinView.h添加方法:
+     - (void)dimissView;
+     - (void)dimissView {
+            if (self.aniObj && [self.aniObj respondsToSelector:@selector(steDissmissAnimationView:inContainterView:)]) {
+            [self.aniObj steDissmissAnimationView:self inContainterView:self.superview];
+     }
+     在代理方法中调用调用形式:
+     
+     - (void)springAnimationViewConfirmWithView:(SteSpringAnimationView*)view {
+        //其他业务逻辑
+        [view dimissview];
+        //其他逻辑
+     }
+     - (void)springAnimationViewCancelWithView:(SteSpringAnimationView*)view {
+        //其他业务逻辑
+        [view dimissview];
+        //其他逻辑
+     }
+     这种方法可以节省一些代码(如果animationView 有多个action);但缺点是:暴露到外部的过多;
+     */
+    
+    //如果要区分需要添加一个 判断是执行那个动作的标志；
     if (_delegate && [_delegate respondsToSelector:@selector(springAnimationViewCancelWithView:)]) {
         [_delegate springAnimationViewCancelWithView:self];
     }
@@ -177,6 +213,8 @@ static const CGFloat ActionHeight = 50;
 }
 
 - (void)steDidRemoveView:(UIView*)view fromContainView:(UIView*)conv{
+    //如果执行任务,不应该阻塞主线程
+    // performTarget action withObj 来执行对应的方法;
     NSLog(@"%s",__FUNCTION__);
 }
 

@@ -16,9 +16,9 @@
 
 #import "SteBaseAnimationViewController.h"
 #import "SteViewControllerSpringAnimationViewObj.h"
-#import "SteCommonSingleTitleAndActionView.h"
+#import "SteCommonSingleTitleAndDoubleActionView.h"
 
-@interface ViewController () <SteBaseAnimationViewControllerDelegate>
+@interface ViewController ()<SteCommonBaseSpringViewDelegate>
 /** ActionBtn */
 @property (strong, nonatomic) UILabel *nameLb;
 
@@ -40,6 +40,14 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+}
 #pragma mark- SetUpView
 
 - (void)setUpView {
@@ -70,14 +78,14 @@
 
 - (void)toastType3 {
     SteViewControllerSpringAnimationViewObj* animationObj = [[SteViewControllerSpringAnimationViewObj alloc]init];
-    SteCommonSingleTitleAndActionView* view = [[SteCommonSingleTitleAndActionView alloc]init];
+    SteCommonSingleTitleAndDoubleActionView* view = [[SteCommonSingleTitleAndDoubleActionView alloc]init];
+    view.externDelegate = self;
     SteBaseAnimationViewController* ctrl = [SteBaseAnimationViewController loadWithInsetView:view animationObj:animationObj];
-    ctrl.delegate = self;
     [self presentViewController:ctrl animated:NO completion:nil];
 }
 
--(void)steBaseAnimationViewController:(SteBaseAnimationViewController *)ctrl dissmissWithAnimationView:(SteViewControllerAnimationSuperView<SteViewControllerAnimationObjDelegate> *)animationView {
-    NSLog(@"----- %@",animationView);
+- (void)steCommonBaseSpringView:(SteCommonBaseSpringView*)view withActionType:(SteCommonBaseSpringViewActionType)type {
+    NSLog(@"====type:%lu",(unsigned long)type);
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 

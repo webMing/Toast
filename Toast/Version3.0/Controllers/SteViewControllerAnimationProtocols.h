@@ -15,8 +15,12 @@
 @required
 //@property (weak, nonatomic) id<SteViewControllerAnimationObjDelegate>delegate;
 - (void)addDelegate:(id<SteViewControllerAnimationObjDelegate>)delegate;
+
 - (void)steShowAnimationView:(UIView*)view inContainterView:(UIView*)cview;
 - (void)steDissmissAnimationView:(UIView*)view inContainterView:(UIView*)cview;
+
+@optional
+- (void)steWillShowAnimationView:(UIView*)view inContainterView:(UIView*)cview;
 @end
 
 @protocol SteViewControllerAnimationObjDelegate <NSObject>

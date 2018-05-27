@@ -5,9 +5,9 @@
 //  Copyright © 2018年 Stephanie. All rights reserved.
 //
 
-#import "SteViewControllerAnimationSuperView.h"
+#import "SteCommonBaseSpringView.h"
 
-@interface SteCommonSingleTitleAndDoubleActionView : SteViewControllerAnimationSuperView
+@interface SteCommonSingleTitleAndDoubleActionView : SteCommonBaseSpringView
 @property (strong, nonatomic) UIButton *leftActionBtn; //不要使用TargetAction
 @property (strong, nonatomic) UIButton *rightActionBtn; //不要使用TargetAction
 @property (strong, nonatomic) UILabel *titleLb;

@@ -14,8 +14,8 @@
 
 @implementation SteCommonDoubleTitleAndActionView
 
-
 #pragma mark- LifeCicle
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setUpView];
@@ -24,7 +24,6 @@
     }
     return self;
 }
-
 
 #pragma mark- SetUpView
 
@@ -70,23 +69,28 @@
         [self.delegate steDissmissAnimationView:self inContainterView:self.superview];
     }
 }
+
 #pragma mark- SteViewControllerAnimationObjDelegate
 
 - (void)steWillShowView:(UIView *)view inContainterView:(UIView *)cview {
-    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    NSLog(@"%@",NSStringFromSelector(@selector(steWillShowView:inContainterView:)));
 }
 
 - (void)steDidShowView:(UIView *)view inContainterView:(UIView *)cview {
-    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    NSLog(@"%@",NSStringFromSelector(@selector(steDidShowView:inContainterView:)));
 }
 
 - (void)steWillRemoveView:(UIView *)view fromContainView:(UIView *)conv {
-    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    NSLog(@"%@",NSStringFromSelector(@selector(steWillRemoveView:fromContainView:)));
 }
 
 - (void)steDidRemoveView:(UIView *)view fromContainView:(UIView *)conv {
     /*只能用作更新View状态*/
     NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    if (self.externDelegate && [self.externDelegate respondsToSelector:@selector(steCommonBaseSpringView:withActionType:)]) {
+        [self.externDelegate steCommonBaseSpringView:self withActionType:SteCommonBaseSpringViewCenterAction];
+        
+    }
 }
 
 #pragma mark- DelegateMethod

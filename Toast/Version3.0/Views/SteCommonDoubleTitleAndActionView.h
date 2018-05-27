@@ -5,9 +5,9 @@
 //  Copyright © 2018年 Stephanie All rights reserved.
 //
 
-#import "SteViewControllerAnimationSuperView.h"
+#import "SteCommonBaseSpringView.h"
 
-@interface SteCommonDoubleTitleAndActionView : SteViewControllerAnimationSuperView
+@interface SteCommonDoubleTitleAndActionView : SteCommonBaseSpringView
 @property (strong, nonatomic) UIButton *actionBtn; //不要使用TargetAction
 @property (strong, nonatomic) UILabel *largeTitleLb; //大标题
 @property (strong, nonatomic) UILabel *titleLb; //小标题

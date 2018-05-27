@@ -40,6 +40,7 @@
     [self addSubview:self.rightActionBtn];
     [self addSubview:self.leftActionBtn];
 }
+
 - (void)layoutCustomViews {
     [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.top.offset(10.0f);
@@ -77,12 +78,14 @@
 
 - (void)leftAction {
     if (self.delegate && [self.delegate respondsToSelector:@selector(steDissmissAnimationView:inContainterView:) ]) {
+        self.type = SteCommonBaseSpringViewLeftAction;
         [self.delegate steDissmissAnimationView:self inContainterView:self.superview];
     }
 }
 
 - (void)rightAction {
     if (self.delegate && [self.delegate respondsToSelector:@selector(steDissmissAnimationView:inContainterView:) ]) {
+        self.type = SteCommonBaseSpringViewRightAction;
         [self.delegate steDissmissAnimationView:self inContainterView:self.superview];
     }
 }
@@ -90,20 +93,24 @@
 #pragma mark- SteViewControllerAnimationObjDelegate
 /* 只用于更新View的状态*/
 - (void)steWillShowView:(UIView *)view inContainterView:(UIView *)cview {
-    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    NSLog(@"%@",NSStringFromSelector(@selector(steWillShowView:inContainterView:)));
 }
 
 - (void)steDidShowView:(UIView *)view inContainterView:(UIView *)cview {
-    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    NSLog(@"%@",NSStringFromSelector(@selector(steDidShowView:inContainterView:)));
 }
 
 - (void)steWillRemoveView:(UIView *)view fromContainView:(UIView *)conv {
-    NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    NSLog(@"%@",NSStringFromSelector(@selector(steWillRemoveView:fromContainView:)));
 }
 
 - (void)steDidRemoveView:(UIView *)view fromContainView:(UIView *)conv {
-    /*只能用作更新View状态*/
+
     NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
+    if (self.externDelegate && [self.externDelegate respondsToSelector:@selector(steCommonBaseSpringView:withActionType:)]) {
+        [self.externDelegate steCommonBaseSpringView:self withActionType:self.type];
+        self.type = SteCommonBaseSpringViewNoneAction;
+    }
 }
 
 #pragma mark- DelegateMethod
