@@ -14,6 +14,7 @@
 		9057BEC320B9919300FC5C22 /* SteViewControllerAnimationSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9057BEC220B9919300FC5C22 /* SteViewControllerAnimationSuperView.m */; };
 		9057BEC820B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9057BEC720B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m */; };
 		9057BECC20BA9DC600FC5C22 /* SteCommonFromBottomUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9057BECB20BA9DC600FC5C22 /* SteCommonFromBottomUpView.m */; };
+		9079F95420BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9079F95320BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.m */; };
 		90C2E60520B5BB6800A105F1 /* SteAnimationViewSuperObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5F620B5BB6700A105F1 /* SteAnimationViewSuperObj.m */; };
 		90C2E60620B5BB6800A105F1 /* SteAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5F920B5BB6700A105F1 /* SteAnimationViewObj.m */; };
 		90C2E60720B5BB6800A105F1 /* SteSpringAnimationViewObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C2E5FA20B5BB6700A105F1 /* SteSpringAnimationViewObj.m */; };
@@ -78,6 +79,8 @@
 		9057BEC720B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteViewControllerSpringAnimationViewObj.m; sourceTree = "<group>"; };
 		9057BECA20BA9DC600FC5C22 /* SteCommonFromBottomUpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteCommonFromBottomUpView.h; sourceTree = "<group>"; };
 		9057BECB20BA9DC600FC5C22 /* SteCommonFromBottomUpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteCommonFromBottomUpView.m; sourceTree = "<group>"; };
+		9079F95220BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteCommonFromBottomUpViewObj.h; sourceTree = "<group>"; };
+		9079F95320BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteCommonFromBottomUpViewObj.m; sourceTree = "<group>"; };
 		90C2E5F620B5BB6700A105F1 /* SteAnimationViewSuperObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteAnimationViewSuperObj.m; sourceTree = "<group>"; };
 		90C2E5F720B5BB6700A105F1 /* SteSpringAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteSpringAnimationView.h; sourceTree = "<group>"; };
 		90C2E5F820B5BB6700A105F1 /* SteAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteAnimationView.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 			children = (
 				9057BEC620B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.h */,
 				9057BEC720B9935300FC5C22 /* SteViewControllerSpringAnimationViewObj.m */,
+				9079F95220BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.h */,
+				9079F95320BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.m */,
 			);
 			path = AnimationObj;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				90DD7F0C20B44E1F00F9BD5F /* AnimationView.m in Sources */,
 				90C2E61C20B5BC4000A105F1 /* SteCommonBaseSpringView.m in Sources */,
 				90DD7EC520B44A6E00F9BD5F /* AppDelegate.m in Sources */,
+				9079F95420BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.m in Sources */,
 				90DD7EFE20B44E1600F9BD5F /* SteFont.m in Sources */,
 				90DD7F0F20B44E1F00F9BD5F /* PopAnimationSuperObj.m in Sources */,
 			);
@@ -749,7 +755,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FDDL2JF86;
+				DEVELOPMENT_TEAM = V3Y97M2QT7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Toast/PrefixHeader.pch";
 				INFOPLIST_FILE = Toast/Info.plist;
@@ -770,7 +776,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FDDL2JF86;
+				DEVELOPMENT_TEAM = V3Y97M2QT7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Toast/PrefixHeader.pch";
 				INFOPLIST_FILE = Toast/Info.plist;

@@ -7,6 +7,8 @@
 //
 
 #import "SteCommonFromBottomUpView.h"
+#import "SteFont.h"
+#import "SteColors.h"
 #import <Masonry.h>
 
 @interface SteCommonFromBottomUpView()
@@ -14,6 +16,8 @@
 @property (strong, nonatomic) UILabel  * cancelLb;
 @property (strong, nonatomic) UIControl* confirmCtr;
 @property (strong, nonatomic) UIControl* cancelCtr;
+
+@property (assign, nonatomic) SEL actionSel;
 @end
 
 @implementation SteCommonFromBottomUpView
@@ -32,7 +36,8 @@
 #pragma mark- SetUpView
 
 - (void)setUpViews {
-    
+    self.backgroundColor = [UIColor redColor];
+    self.actionSel = @selector(cancleDelegateAction); //点击maskView 是cancel操作
 }
 
 - (void)addCustomViews {
@@ -63,25 +68,43 @@
     
 }
 
+- (void)didMoveToSuperview {
+    if (self.superview) {
+        [self mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.superview.mas_bottom);
+            make.leading.trailing.equalTo(self.superview);
+            make.height.equalTo(@120.0f);
+        }];
+    }
+}
+
 #pragma mark- EventRespone
-/*
+
 - (void)confirmAction {
-//    if (_delegate && [_delegate respondsToSelector:@selector(confirmWithanimationView:)]) {
-//        [_delegate confirmWithanimationView:self];
-//    }
+    self.actionSel = @selector(confirmDelegateAction);
     [self dimissSelf];
+}
+
+- (void)confirmDelegateAction {
+    if (_externDelegate && [_externDelegate respondsToSelector:@selector(SteCommonFromBottomUpViewConfirm:)]) {
+        [_externDelegate SteCommonFromBottomUpViewConfirm:self];
+    }
 }
 
 - (void)cancelAction {
-    if (_delegate && [_delegate respondsToSelector:@selector(cancelWithanimationView:)]) {
-        [_delegate cancelWithanimationView:self];
-    }
+    self.actionSel = @selector(cancleDelegateAction);
     [self dimissSelf];
 }
 
+- (void)cancleDelegateAction {
+    if (_externDelegate && [_externDelegate respondsToSelector:@selector(SteCommonFromBottomUpViewCancel:)]) {
+        [_externDelegate SteCommonFromBottomUpViewCancel:self];
+    }
+}
+
 - (void)dimissSelf {
-    if (self.aniObj && [self.aniObj respondsToSelector:@selector(steDissmissAnimationView:inContainterView:)]) {
-        [self.aniObj steDissmissAnimationView:self inContainterView:self.superview];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(steDissmissAnimationView:inContainterView:)]) {
+        [self.delegate steDissmissAnimationView:self inContainterView:self.superview];
     }
 }
 
@@ -102,7 +125,8 @@
 }
 
 - (void)steDidRemoveView:(UIView*)view fromContainView:(UIView*)conv{
-    NSLog(@"%s",__FUNCTION__);
+    //NSLog(@"%s",__FUNCTION__);
+    [self performSelector:self.actionSel withObject:self];
 }
 
 #pragma mark- DelegateMethod
@@ -145,6 +169,7 @@
     }
     return _cancelCtr;
 }
+
 #pragma mark- PrivateMethod
-*/
+
 @end

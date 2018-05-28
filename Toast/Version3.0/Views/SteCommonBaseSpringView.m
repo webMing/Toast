@@ -40,7 +40,7 @@
 #pragma mark- SetUpView
 
 - (void)superSetUpViews {
-    self.backgroundColor = [UIColor redColor];
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)superAddCustomViews{

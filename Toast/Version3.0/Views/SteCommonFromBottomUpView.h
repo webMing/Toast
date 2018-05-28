@@ -8,6 +8,12 @@
 
 #import "SteViewControllerAnimationSuperView.h"
 
-@interface SteCommonFromBottomUpView : SteViewControllerAnimationSuperView
+@class SteCommonFromBottomUpView;
+@protocol SteCommonFromBottomUpViewDelegate <NSObject>
+- (void)SteCommonFromBottomUpViewCancel:(SteCommonFromBottomUpView*)view;
+- (void)SteCommonFromBottomUpViewConfirm:(SteCommonFromBottomUpView*)view;
+@end
 
+@interface SteCommonFromBottomUpView : SteViewControllerAnimationSuperView
+@property (weak, nonatomic) id<SteCommonFromBottomUpViewDelegate>externDelegate;
 @end

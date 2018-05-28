@@ -14,11 +14,13 @@
     [self ste_willShowView:view inContainterView:cview];
     CGAffineTransform trans = CGAffineTransformScale(view.transform, 0.001, 0.001);
     view.transform = trans;  // do it instantly, no animation
+    cview.alpha = 0.0f;
 }
 
 - (void)steShowAnimationView:(UIView *)view inContainterView:(UIView *)cview {
     [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
         view.transform = CGAffineTransformScale(view.transform, 1000.0f, 1000.0f);
+        cview.alpha = 1.0f;
     } completion:^(BOOL finished) {
           [self ste_didShowView:view inContainterView:cview];
     }];
@@ -29,7 +31,7 @@
     [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
         view.transform = CGAffineTransformScale(view.transform, 0.001f, 0.001f);
         view.alpha = 0.3f;
-        cview.superview.backgroundColor = [UIColor clearColor]; //scrollView BackGroundColor
+        cview.backgroundColor = [UIColor clearColor]; //scrollView BackGroundColor
     } completion:^(BOOL finished) {
         if (finished) {
             [view removeFromSuperview];

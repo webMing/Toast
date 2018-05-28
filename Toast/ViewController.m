@@ -18,7 +18,11 @@
 #import "SteViewControllerSpringAnimationViewObj.h"
 #import "SteCommonSingleTitleAndDoubleActionView.h"
 
-@interface ViewController ()<SteCommonBaseSpringViewDelegate>
+
+#import "SteCommonFromBottomUpView.h"
+#import "SteCommonFromBottomUpViewObj.h"
+
+@interface ViewController ()<SteCommonBaseSpringViewDelegate, SteCommonFromBottomUpViewDelegate>
 /** ActionBtn */
 @property (strong, nonatomic) UILabel *nameLb;
 
@@ -68,7 +72,23 @@
     [self toastType3];
 }
 
-#pragma mark- CustomDelegateMethod
+#pragma mark- SteCommonBaseSpringViewDelegate
+
+- (void)steCommonBaseSpringView:(SteCommonBaseSpringView*)view withActionType:(SteCommonBaseSpringViewActionType)type {
+    NSLog(@"====type:%lu",(unsigned long)type);
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+#pragma mark- SteCommonFromBottomUpViewDelegate
+- (void)SteCommonFromBottomUpViewCancel:(SteCommonFromBottomUpView*)view {
+    NSLog(@"%@ Cancel Action!",view);
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (void)SteCommonFromBottomUpViewConfirm:(SteCommonFromBottomUpView*)view {
+    NSLog(@"%@ Confirm Action!",view);
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
 
 #pragma mark- DelegateMethod
 
@@ -76,17 +96,21 @@
 
 #pragma mark- PrivateMethod
 
+- (void)toastType4 {
+    SteCommonFromBottomUpViewObj* animationObj = [[SteCommonFromBottomUpViewObj alloc]init];
+    SteCommonFromBottomUpView* view = [[SteCommonFromBottomUpView alloc]init];
+    view.externDelegate = self;
+    SteBaseAnimationViewController* ctrl = [SteBaseAnimationViewController loadWithInsetView:view animationObj:animationObj];
+    [self presentViewController:ctrl animated:NO completion:nil];
+}
+
+
 - (void)toastType3 {
     SteViewControllerSpringAnimationViewObj* animationObj = [[SteViewControllerSpringAnimationViewObj alloc]init];
     SteCommonSingleTitleAndDoubleActionView* view = [[SteCommonSingleTitleAndDoubleActionView alloc]init];
     view.externDelegate = self;
     SteBaseAnimationViewController* ctrl = [SteBaseAnimationViewController loadWithInsetView:view animationObj:animationObj];
     [self presentViewController:ctrl animated:NO completion:nil];
-}
-
-- (void)steCommonBaseSpringView:(SteCommonBaseSpringView*)view withActionType:(SteCommonBaseSpringViewActionType)type {
-    NSLog(@"====type:%lu",(unsigned long)type);
-    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)toastType2 {

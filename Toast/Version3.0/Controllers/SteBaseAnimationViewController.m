@@ -89,8 +89,7 @@
 - (void)setUpView {
     [self.scrollContentView addGestureRecognizer:self.tapGesture];
     self.view.backgroundColor = [UIColor clearColor];
-    //scrollView as maskView;
-    self.scrollView.backgroundColor = [[UIColor colorWithHex:0x050205]colorWithAlphaComponent:0.13];
+    self.scrollContentView.backgroundColor = [[UIColor colorWithHex:0x050205]colorWithAlphaComponent:0.13];
     self.scrollView.scrollEnabled = NO;
 }
 
@@ -202,11 +201,11 @@
 }
 
 - (void)setMaskViewBackGroundColor:(UIColor *)maskViewBackGroundColor {
-    self.scrollView.backgroundColor = maskViewBackGroundColor;
+    self.scrollContentView.backgroundColor = maskViewBackGroundColor;
 }
 
 - (UIColor*)maskViewBackGroundColor {
-    return self.scrollView.backgroundColor;
+    return self.scrollContentView.backgroundColor;
 }
 
 - (void)setScrollEnable:(BOOL)scrollEnable {

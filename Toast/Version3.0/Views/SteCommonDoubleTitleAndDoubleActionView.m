@@ -113,7 +113,8 @@
     NSLog(@"%@",NSStringFromSelector(@selector(steDidRemoveView:fromContainView:)));
     if (self.externDelegate && [self.externDelegate respondsToSelector:@selector(steCommonBaseSpringView:withActionType:)]) {
         [self.externDelegate steCommonBaseSpringView:self withActionType:self.type];
-        self.type = SteCommonBaseSpringViewNoneAction;
+        //视图已经消失;不用更新type
+        //self.type = SteCommonBaseSpringViewNoneAction;
     }
 }
 
