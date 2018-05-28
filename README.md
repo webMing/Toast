@@ -8,6 +8,7 @@
 #import "SteCommonFromBottomUpView.h"
 #import "SteCommonFromBottomUpViewObj.h"
 
+```
 - (void)toastType4 {
     SteCommonFromBottomUpViewObj* animationObj = [[SteCommonFromBottomUpViewObj alloc]init];
     SteCommonFromBottomUpView* view = [[SteCommonFromBottomUpView alloc]init];
@@ -26,3 +27,4 @@
     //ctrl.scrollEnable = YES;
     [self presentViewController:ctrl animated:NO completion:nil];
 }
+```
