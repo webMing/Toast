@@ -22,6 +22,7 @@
 
 ```
 #pragma mark- SteCommonFromBottomUpViewDelegate
+
 - (void)SteCommonFromBottomUpViewCancel:(SteCommonFromBottomUpView*)view {
     NSLog(@"%@ Cancel Action!",view);
     [self dismissViewControllerAnimated:NO completion:nil];
@@ -48,11 +49,10 @@
     [self presentViewController:ctrl animated:NO completion:nil];
 }
 ```
-`
-``
-```
 
+```
 #pragma mark- SteCommonBaseSpringViewDelegate
+
 - (void)steCommonBaseSpringView:(SteCommonBaseSpringView*)view withActionType:(SteCommonBaseSpringViewActionType)type {
     NSLog(@"====type:%lu",(unsigned long)type);
     [self dismissViewControllerAnimated:NO completion:nil];
