@@ -18,6 +18,7 @@
     SteBaseAnimationViewController* ctrl = [SteBaseAnimationViewController loadWithInsetView:view animationObj:animationObj];
     [self presentViewController:ctrl animated:NO completion:nil];
 }
+```
 
 ```
 #pragma mark- SteCommonFromBottomUpViewDelegate
@@ -33,8 +34,7 @@
 ```
 
 ### UseType2
-
-、、、
+```
 - (void)toastType3 {
     SteViewControllerSpringAnimationViewObj* animationObj = [[SteViewControllerSpringAnimationViewObj alloc]init];
     SteCommonSingleTitleAndDoubleActionView* view = [[SteCommonSingleTitleAndDoubleActionView alloc]init];
@@ -47,10 +47,11 @@
     //ctrl.scrollEnable = YES;
     [self presentViewController:ctrl animated:NO completion:nil];
 }
-、、、
-
-
 ```
+`
+``
+```
+
 #pragma mark- SteCommonBaseSpringViewDelegate
 - (void)steCommonBaseSpringView:(SteCommonBaseSpringView*)view withActionType:(SteCommonBaseSpringViewActionType)type {
     NSLog(@"====type:%lu",(unsigned long)type);
