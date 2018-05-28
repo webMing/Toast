@@ -110,6 +110,8 @@
     SteCommonSingleTitleAndDoubleActionView* view = [[SteCommonSingleTitleAndDoubleActionView alloc]init];
     view.externDelegate = self;
     SteBaseAnimationViewController* ctrl = [SteBaseAnimationViewController loadWithInsetView:view animationObj:animationObj];
+    //ctrl.enableMaskViewTapAction = NO;
+    //ctrl.scrollEnable = YES;
     [self presentViewController:ctrl animated:NO completion:nil];
 }
 

@@ -90,7 +90,6 @@
     [self.scrollContentView addGestureRecognizer:self.tapGesture];
     self.view.backgroundColor = [UIColor clearColor];
     self.scrollContentView.backgroundColor = [[UIColor colorWithHex:0x050205]colorWithAlphaComponent:0.13];
-    self.scrollView.scrollEnabled = NO;
 }
 
 - (void)addCustomView {
@@ -180,6 +179,7 @@
         _scrollView = [[UIScrollView alloc]initWithFrame:CGRectZero];
         _scrollView.backgroundColor = [UIColor clearColor];
         _scrollView.alwaysBounceVertical = YES;
+        _scrollView.scrollEnabled = NO; //scrollView
     }
     return _scrollView;
 }
