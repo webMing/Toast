@@ -121,6 +121,7 @@
     SteSpringAnimationViewObj* obj = [[SteSpringAnimationViewObj alloc]init];
     [view showInContainView:self.view withAnimationObj:obj];
 }
+
 - (void)toastType1 {
     //这里强引用有问题哦.
 //     SteAnimationView* view = [[SteAnimationView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];

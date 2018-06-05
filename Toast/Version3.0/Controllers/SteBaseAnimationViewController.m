@@ -20,6 +20,7 @@
 
 @property (strong, nonatomic) SteViewControllerAnimationSuperView<SteViewControllerAnimationObjDelegate>* animationView;
 @property (strong, nonatomic) id<SteViewControllerAnimationViewDelegate> animationObj;
+
 @end
 
 /*

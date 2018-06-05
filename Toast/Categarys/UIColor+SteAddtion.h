@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (SteAddtion)
+
 + (UIColor*)colorWithHex:(NSInteger)hValue;
 + (UIColor*)colorWithHex:(NSInteger)hValue alpha:(CGFloat)aValue;
 

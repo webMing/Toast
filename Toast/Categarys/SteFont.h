@@ -51,6 +51,7 @@ FOUNDATION_EXPORT UIFont* StePTBoldFontWithSize(CGFloat size);
 #define StePF_Regular_Font_Size(size)    StePFRegularFontWithSize(size)
 #define StePF_Thin_Font_Size(size)       StePFThinFontWithSize(size)
 
+
 FOUNDATION_EXPORT UIFont* StePFMediumFontWithSize(CGFloat size);
 FOUNDATION_EXPORT UIFont* StePFSemiboldFontWithSize(CGFloat size);
 FOUNDATION_EXPORT UIFont* StePFLightFontWithSize(CGFloat size);
