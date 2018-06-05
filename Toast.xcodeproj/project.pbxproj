@@ -36,9 +36,6 @@
 		90DD7ED320B44A7000F9BD5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7ED220B44A7000F9BD5F /* main.m */; };
 		90DD7EDD20B44A7000F9BD5F /* ToastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EDC20B44A7000F9BD5F /* ToastTests.m */; };
 		90DD7EE820B44A7000F9BD5F /* ToastUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EE720B44A7000F9BD5F /* ToastUITests.m */; };
-		90DD7EFC20B44E1600F9BD5F /* UIColor+SteAddtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EF920B44E1600F9BD5F /* UIColor+SteAddtion.m */; };
-		90DD7EFD20B44E1600F9BD5F /* SteColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EFA20B44E1600F9BD5F /* SteColors.m */; };
-		90DD7EFE20B44E1600F9BD5F /* SteFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7EFB20B44E1600F9BD5F /* SteFont.m */; };
 		90DD7F0B20B44E1F00F9BD5F /* AnimationSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0020B44E1E00F9BD5F /* AnimationSuperView.m */; };
 		90DD7F0C20B44E1F00F9BD5F /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0720B44E1E00F9BD5F /* AnimationView.m */; };
 		90DD7F0D20B44E1F00F9BD5F /* AnimationViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DD7F0820B44E1E00F9BD5F /* AnimationViewCtrl.m */; };
@@ -125,12 +122,6 @@
 		90DD7EE320B44A7000F9BD5F /* ToastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DD7EE720B44A7000F9BD5F /* ToastUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastUITests.m; sourceTree = "<group>"; };
 		90DD7EE920B44A7000F9BD5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90DD7EF620B44E1600F9BD5F /* UIColor+SteAddtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SteAddtion.h"; sourceTree = "<group>"; };
-		90DD7EF720B44E1600F9BD5F /* SteFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteFont.h; sourceTree = "<group>"; };
-		90DD7EF820B44E1600F9BD5F /* SteColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteColors.h; sourceTree = "<group>"; };
-		90DD7EF920B44E1600F9BD5F /* UIColor+SteAddtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SteAddtion.m"; sourceTree = "<group>"; };
-		90DD7EFA20B44E1600F9BD5F /* SteColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteColors.m; sourceTree = "<group>"; };
-		90DD7EFB20B44E1600F9BD5F /* SteFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteFont.m; sourceTree = "<group>"; };
 		90DD7F0020B44E1E00F9BD5F /* AnimationSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationSuperView.m; sourceTree = "<group>"; };
 		90DD7F0120B44E1E00F9BD5F /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
 		90DD7F0220B44E1E00F9BD5F /* PopAnimationObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimationObj.h; sourceTree = "<group>"; };
@@ -286,7 +277,6 @@
 		90DD7EC220B44A6E00F9BD5F /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				90DD7EF520B44E1600F9BD5F /* Categarys */,
 				90DD7EFF20B44E1E00F9BD5F /* ToastInViewVersion1.0 */,
 				90C2E5F520B5BB6700A105F1 /* ToastInViewVersion2.0 */,
 				90C2E60C20B5BC4000A105F1 /* Version3.0 */,
@@ -320,19 +310,6 @@
 				90DD7EE920B44A7000F9BD5F /* Info.plist */,
 			);
 			path = ToastUITests;
-			sourceTree = "<group>";
-		};
-		90DD7EF520B44E1600F9BD5F /* Categarys */ = {
-			isa = PBXGroup;
-			children = (
-				90DD7EF620B44E1600F9BD5F /* UIColor+SteAddtion.h */,
-				90DD7EF920B44E1600F9BD5F /* UIColor+SteAddtion.m */,
-				90DD7EF720B44E1600F9BD5F /* SteFont.h */,
-				90DD7EF820B44E1600F9BD5F /* SteColors.h */,
-				90DD7EFA20B44E1600F9BD5F /* SteColors.m */,
-				90DD7EFB20B44E1600F9BD5F /* SteFont.m */,
-			);
-			path = Categarys;
 			sourceTree = "<group>";
 		};
 		90DD7EFF20B44E1E00F9BD5F /* ToastInViewVersion1.0 */ = {
@@ -572,9 +549,7 @@
 				90DD7F0D20B44E1F00F9BD5F /* AnimationViewCtrl.m in Sources */,
 				90C2E60720B5BB6800A105F1 /* SteSpringAnimationViewObj.m in Sources */,
 				90DD7ED320B44A7000F9BD5F /* main.m in Sources */,
-				90DD7EFD20B44E1600F9BD5F /* SteColors.m in Sources */,
 				90C2E61E20B5BC4000A105F1 /* SteCommonDoubleTitleAndDoubleActionView.m in Sources */,
-				90DD7EFC20B44E1600F9BD5F /* UIColor+SteAddtion.m in Sources */,
 				90DD7F0E20B44E1F00F9BD5F /* PopAnimationObj.m in Sources */,
 				90C2E60820B5BB6800A105F1 /* SteAnimationMaskView.m in Sources */,
 				9057BEC320B9919300FC5C22 /* SteViewControllerAnimationSuperView.m in Sources */,
@@ -583,7 +558,6 @@
 				90C2E61C20B5BC4000A105F1 /* SteCommonBaseSpringView.m in Sources */,
 				90DD7EC520B44A6E00F9BD5F /* AppDelegate.m in Sources */,
 				9079F95420BC36F3009F0B46 /* SteCommonFromBottomUpViewObj.m in Sources */,
-				90DD7EFE20B44E1600F9BD5F /* SteFont.m in Sources */,
 				90DD7F0F20B44E1F00F9BD5F /* PopAnimationSuperObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
