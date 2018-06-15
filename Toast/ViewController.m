@@ -55,7 +55,7 @@
 #pragma mark- SetUpView
 
 - (void)setUpView {
-    
+    self.automaticallyAdjustsScrollViewInsets
 }
 
 - (void)addCustomView {
